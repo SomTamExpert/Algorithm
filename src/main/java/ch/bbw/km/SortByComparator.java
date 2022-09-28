@@ -2,6 +2,12 @@ package ch.bbw.km;
 
 import java.util.Comparator;
 
+/**
+ * Class for sorting Person class by specific parameters
+ *
+ * @author marco
+ * @version 28.09.2022
+ */
 public class SortByComparator implements Comparator<Person> {
 
 //Aufgabe 4.3

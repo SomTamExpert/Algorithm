@@ -1,6 +1,13 @@
 package ch.bbw.km;
+//Aufgabe 4.1
 
-public class Person implements Comparable<Person>{
+/**
+ * Class Person with sorting method
+ *
+ * @author marco
+ * @version 28.09.2022
+ */
+public class Person implements Comparable<Person> {
     private String firstname; // Vorname
     private String lastname; // Nachname
     private double height; // Körpergrösse in cm
@@ -66,7 +73,7 @@ public class Person implements Comparable<Person>{
 //        }
 //    }
 
-// Aufgabe 4.2
+    // Aufgabe 4.2
     public int compareTo(Person p1) {
         if (lastname.compareTo(p1.getLastname()) > 0) {
             return 1;

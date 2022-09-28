@@ -1,7 +1,8 @@
 package ch.bbw.km;
 
 /**
- * Class for sorting an array of integers
+ * Class for sorting an array of integers and also for sorting an array of Person objects
+ *
  * @author marco
  * @version 13.09.2022
  */
@@ -19,15 +20,15 @@ public class Sorter {
         // temporary variable to swap elements
         Person temp;
         // loop through all numbers
-        for(int i=0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             // loop through numbers falling ahead
-            for(int j=1; j < (n-i); j++){
+            for (int j = 1; j < (n - i); j++) {
                 // compare elements and swap if greater than
-                if(people[j-1].compareTo(people[j]) > 0){
+                if (people[j - 1].compareTo(people[j]) > 0) {
                     //swap elements
-                    temp = people[j-1];
+                    temp = people[j - 1];
                     // assign greater element to the left
-                    people[j-1] = people[j];
+                    people[j - 1] = people[j];
                     // assign smaller element to the right
                     people[j] = temp;
                 }
@@ -35,6 +36,7 @@ public class Sorter {
         }
 
     }
+
     public static void insertionSort(int[] array) {
         // array length
         int n = array.length;
@@ -43,21 +45,20 @@ public class Sorter {
             // assign element to be compared
             int key = array[j];
             // assign index of previous element
-            int i = j-1;
+            int i = j - 1;
             // loop through all elements on the left of the compared element
-            while ( (i > -1) && ( array [i] > key ) ) {
-                array [i+1] = array [i];
+            while ((i > -1) && (array[i] > key)) {
+                array[i + 1] = array[i];
                 i--;
             }
             // assign element to the right of the compared element
-            array[i+1] = key;
+            array[i + 1] = key;
         }
     }
 
     public static void selectionSort(int[] array) {
         // array length
-        for (int i = 0; i < array.length - 1; i++)
-        {
+        for (int i = 0; i < array.length - 1; i++) {
             int index = i;
             for (int j = i + 1; j < array.length; j++)
                 if (array[j] < array[index])
